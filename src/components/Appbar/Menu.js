@@ -15,7 +15,8 @@ import routes from '../../routing/routers'
 import MenuList from "@material-ui/core/MenuList";
 import MenuItem from "@material-ui/core/MenuItem";
 import Divider from "@material-ui/core/Divider";
-
+//lanuages
+import { withI18n } from "react-i18next";
 
 const styles = {
 	list: {
@@ -40,7 +41,7 @@ class SwipeableTemporaryDrawer extends React.Component {
 	}
 
 	render() {
-
+		const { t, i18n } = this.props;
 		return (
 			<div>
 				<MenuIcon onClick={() => { this.toogleMenu() }} />
@@ -69,7 +70,7 @@ class SwipeableTemporaryDrawer extends React.Component {
 										<Link to={prop.path} style={{ textDecoration: 'none' }} >
 											<MenuItem >
 												<ListItemIcon children={<prop.icon />} />
-												<ListItemText primary={prop.sidebarName} />
+												<ListItemText primary={t(prop.sidebarName)} />
 											</MenuItem>
 										</Link>
 									</div>
@@ -87,4 +88,4 @@ SwipeableTemporaryDrawer.propTypes = {
 	classes: PropTypes.object.isRequired,
 };
 
-export default withRouter(withStyles(styles)(SwipeableTemporaryDrawer));
+export default withI18n()(withRouter(withStyles(styles)(SwipeableTemporaryDrawer)));
