@@ -41,7 +41,7 @@ class SwipeableTemporaryDrawer extends React.Component {
 	}
 
 	render() {
-		const { t, i18n } = this.props;
+		const { t } = this.props;
 		return (
 			<div>
 				<MenuIcon onClick={() => { this.toogleMenu() }} />

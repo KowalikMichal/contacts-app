@@ -1,5 +1,6 @@
-import { Home, AccountCircle, Favorite, Settings} from '@material-ui/icons';
+import { Home, AccountCircle, Favorite, Settings } from '@material-ui/icons';
 import Contacts from '../views/Contacts/Contacts'
+import DisplayLanguage from '../views/Settings/DisplayLanguage'
 
 import Test from '../Test'
 
@@ -30,7 +31,7 @@ const Routes = [
     sidebarName: 'Settings',
     navbarName: 'Settings',
     icon: Settings,
-    component: Test
+    component: DisplayLanguage
   }
 ];
 
