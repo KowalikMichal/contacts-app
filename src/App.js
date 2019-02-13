@@ -43,7 +43,7 @@ class App extends Component {
         <Router>
           <>
             <Appbar handleFilter={this.handleFilter} />
-            <Switch>
+            <Switch basename={process.env.PUBLIC_URL}>
               {
                 routers.map((element, key) =>(
                   <Route exact path={element.path} component={element.component} key={key} />
